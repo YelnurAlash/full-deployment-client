@@ -10,6 +10,7 @@ const Login = () => {
     console.log(user);
 
     const handleSubmit = async (e) => {
+        e.preventDefault();
         const response = await fetch('/', {
             method: 'POST',
             body: new FormData(e.target)
